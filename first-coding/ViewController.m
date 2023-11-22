@@ -80,11 +80,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
-//    UIView *view = [[UIView alloc] init];
-//    view.backgroundColor = [UIColor redColor];
-//    view.frame = CGRectMake(100, 100, 100, 100);
-//    [self.view addSubview:view];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     TestView *view2 = [[TestView alloc] init];
     view2.backgroundColor = [UIColor greenColor];
@@ -92,6 +88,20 @@
     [self.view addSubview:view2];
         
     //    view 先入栈，view2 后入栈，view2显示在view上
+    
+    // 建立手势，响应方法pushController
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
+    [view2 addGestureRecognizer:tapGesture];
+}
+
+- (void)pushController{
+    
+    UIViewController *viewController = [[UIViewController alloc]init];
+    viewController.view.backgroundColor = [UIColor whiteColor];
+    viewController.navigationItem.title = @"内容";
+    viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"右侧标题" style:UIBarButtonItemStylePlain target:self action:nil];
+    
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 
