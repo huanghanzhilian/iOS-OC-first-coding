@@ -43,7 +43,7 @@
 
 @end
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDataSource>
 
 @end
 
@@ -82,16 +82,32 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    TestView *view2 = [[TestView alloc] init];
-    view2.backgroundColor = [UIColor greenColor];
-    view2.frame = CGRectMake(150, 150, 100, 100);
-    [self.view addSubview:view2];
-        
-    //    view 先入栈，view2 后入栈，view2显示在view上
-    
-    // 建立手势，响应方法pushController
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
-    [view2 addGestureRecognizer:tapGesture];
+//    TestView *view2 = [[TestView alloc] init];
+//    view2.backgroundColor = [UIColor greenColor];
+//    view2.frame = CGRectMake(150, 150, 100, 100);
+//    [self.view addSubview:view2];
+//
+//    //    view 先入栈，view2 后入栈，view2显示在view上
+//
+//    // 建立手势，响应方法pushController
+//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
+//    [view2 addGestureRecognizer:tapGesture];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 20;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    cell.textLabel.text = @"主标题";
+    cell.detailTextLabel.text = @"副标题";
+    cell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    return cell;
 }
 
 - (void)pushController{
