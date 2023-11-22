@@ -15,6 +15,7 @@
 		B6B62B8E2B0D95C7009BDCDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B62B8C2B0D95C7009BDCDD /* LaunchScreen.storyboard */; };
 		B6B62B912B0D95C7009BDCDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B62B902B0D95C7009BDCDD /* main.m */; };
 		B6B62BB42B0DD121009BDCDD /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B6B62BB32B0DD121009BDCDD /* icon.bundle */; };
+		B6B62BB72B0DF06C009BDCDD /* GTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B62BB62B0DF06C009BDCDD /* GTVideoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		B6B62B8F2B0D95C7009BDCDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6B62B902B0D95C7009BDCDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6B62BB32B0DD121009BDCDD /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = icon.bundle; sourceTree = "<group>"; };
+		B6B62BB52B0DF06C009BDCDD /* GTVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTVideoViewController.h; sourceTree = "<group>"; };
+		B6B62BB62B0DF06C009BDCDD /* GTVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTVideoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,8 @@
 				B6B62B8F2B0D95C7009BDCDD /* Info.plist */,
 				B6B62B902B0D95C7009BDCDD /* main.m */,
 				B6B62BB32B0DD121009BDCDD /* icon.bundle */,
+				B6B62BB52B0DF06C009BDCDD /* GTVideoViewController.h */,
+				B6B62BB62B0DF06C009BDCDD /* GTVideoViewController.m */,
 			);
 			path = "first-coding";
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B62B862B0D95C5009BDCDD /* ViewController.m in Sources */,
+				B6B62BB72B0DF06C009BDCDD /* GTVideoViewController.m in Sources */,
 				B6B62B802B0D95C5009BDCDD /* AppDelegate.m in Sources */,
 				B6B62B912B0D95C7009BDCDD /* main.m in Sources */,
 				B6B62B832B0D95C5009BDCDD /* SceneDelegate.m in Sources */,
