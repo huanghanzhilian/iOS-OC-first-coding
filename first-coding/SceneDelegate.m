@@ -8,7 +8,7 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -48,6 +48,8 @@
     
     [tabbarConttroller setViewControllers:@[viewController,controller2,controller3,controller4]];
     
+    tabbarConttroller.delegate = self;
+    
     //    UIWindow创建
     //    1、创建UIWindow
     //    2、设置rootViewController
@@ -59,6 +61,10 @@
     [self.window makeKeyAndVisible];
 }
 
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"did select");
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
